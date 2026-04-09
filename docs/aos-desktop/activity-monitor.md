@@ -1,13 +1,11 @@
 ---
 title: AOS Desktop 活动监控
 description: 使用标准 OTLP 接入工具调用、模型调用和安全事件。
-sidebar:
-  order: 3
 ---
 
 活动监控是 AOS Desktop 的关键能力之一。它不只看静态文件，也会把运行时的工具调用、模型调用和安全告警统一汇总到一个观察面板中。
 
-![AOS Desktop 活动监控](../../../assets/screenshots/activity-monitor.png)
+![AOS Desktop 活动监控](/images/screenshots/activity-monitor.png)
 
 ## 默认接入地址
 

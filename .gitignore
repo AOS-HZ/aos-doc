@@ -1,7 +1,10 @@
 # build output
 dist/
+docs/.vuepress/dist/
 # generated types
 .astro/
+docs/.vuepress/.cache/
+docs/.vuepress/.temp/
 
 # dependencies
 node_modules/

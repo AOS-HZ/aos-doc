@@ -1,9 +1,6 @@
 ---
 title: AOS CLI
 description: 用终端方式运行 AOS 扫描流程，适合自动化、脚本化和代码库审计场景。
-sidebar:
-  label: 产品概览
-  order: 1
 ---
 
 AOS CLI 是 AgentOfShield 的命令行入口，适合希望在终端、脚本或 CI 中运行扫描流程的团队。它复用了 `aos-core` 的发现与审计能力，把本地扫描、代码库扫描、环境检查和本地 guard 服务暴露成一组稳定命令。
@@ -31,5 +28,5 @@ AOS CLI 是 AgentOfShield 的命令行入口，适合希望在终端、脚本或
 
 ## 继续阅读
 
-- [AOS CLI 快速开始](./quick-start/)
-- [AOS CLI 命令参考](./commands/)
+- [AOS CLI 快速开始](./quick-start.md)
+- [AOS CLI 命令参考](./commands.md)

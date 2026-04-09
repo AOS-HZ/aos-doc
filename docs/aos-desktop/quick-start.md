@@ -1,8 +1,6 @@
 ---
 title: AOS Desktop 快速开始
 description: 用最短路径完成第一次本地扫描、风险查看和后续处置。
-sidebar:
-  order: 2
 ---
 
 这份快速开始适合第一次接触 AOS Desktop 的团队成员，目标是在几分钟内完成第一次扫描并理解结果页面。
@@ -57,5 +55,5 @@ sidebar:
 
 ## 下一步
 
-- 如果你想持续观察运行中的 Agent 行为，继续看 [活动监控](./activity-monitor/)。
+- 如果你想持续观察运行中的 Agent 行为，继续看 [活动监控](./activity-monitor.md)。
 - 如果你需要终端和自动化能力，继续看 [AOS CLI](/aos-cli/)。

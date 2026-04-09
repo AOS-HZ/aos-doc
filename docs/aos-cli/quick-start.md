@@ -1,8 +1,6 @@
 ---
 title: AOS CLI 快速开始
 description: 安装 aos 命令、完成第一次扫描，并把结果导出为 JSON。
-sidebar:
-  order: 2
 ---
 
 这份快速开始适合第一次在终端中接触 AOS 的用户，目标是在几分钟内完成安装、环境检查和第一次扫描。
@@ -87,5 +85,5 @@ aos repo-scan ~/my-agent-project --json --output ./tmp/repo-scan.json
 
 ## 下一步
 
-- 如果你想系统了解命令和参数，继续看 [命令参考](./commands/)。
+- 如果你想系统了解命令和参数，继续看 [命令参考](./commands.md)。
 - 如果你想用图形界面查看结果和风险详情，继续看 [AOS Desktop](/aos-desktop/)。

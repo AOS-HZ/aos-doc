@@ -4,8 +4,8 @@
 
 ## 技术栈
 
-- Astro 6
-- Starlight
+- VuePress 2
+- Default Theme
 
 ## 本地运行
 
@@ -14,7 +14,9 @@ npm install
 npm run dev
 ```
 
-默认启动后访问 `http://localhost:4321`。
+建议使用 Node `^20.9.0` 或 `>=22.18.0`。
+
+默认启动后访问 `http://localhost:4321`。如果该端口已被占用，VuePress 会自动切到下一个可用端口。
 
 ## 构建
 
@@ -25,16 +27,21 @@ npm run build
 ## 内容目录
 
 ```text
-src/content/docs/
-├── index.mdx
+docs/
+├── README.md
 ├── aos-desktop/
-│   ├── index.md
+│   ├── README.md
 │   ├── quick-start.md
 │   └── activity-monitor.md
-└── aos-cli/
-    ├── index.md
-    ├── quick-start.md
-    └── commands.md
+├── aos-cli/
+│   ├── README.md
+│   ├── quick-start.md
+│   └── commands.md
+└── .vuepress/
+    ├── config.ts
+    └── public/
+        ├── favicon.svg
+        └── images/screenshots/
 ```
 
-桌面端截图放在 `src/assets/screenshots/`，文档中通过相对路径直接引用。
+桌面端截图放在 `docs/.vuepress/public/images/screenshots/`，文档中通过公开路径引用。

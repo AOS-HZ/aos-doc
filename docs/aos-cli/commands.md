@@ -1,8 +1,6 @@
 ---
 title: AOS CLI 命令参考
 description: scan、repo-scan、doctor 和 serve 的常见用法与参数说明。
-sidebar:
-  order: 3
 ---
 
 下面的命令与参数来自当前 `aos` 命令的实际帮助输出，适合在终端、脚本或自动化流程中直接使用。
