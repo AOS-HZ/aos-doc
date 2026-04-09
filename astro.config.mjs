@@ -7,9 +7,10 @@ export default defineConfig({
 	site: 'https://docs.agentshield.site',
 	integrations: [
 		starlight({
-			title: 'AgentOfShield Docs',
+			title: 'AOS Docs',
 			description: 'AOS Desktop 与 AOS CLI 的产品文档中心。',
 			favicon: '/favicon.svg',
+			customCss: ['/src/styles/custom.css'],
 			locales: {
 				root: {
 					label: '简体中文',
