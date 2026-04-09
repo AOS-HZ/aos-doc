@@ -1,40 +1,45 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: AgentOfShield 文档中心
+description: AOS Desktop 与 AOS CLI 的产品说明、快速开始和常见使用路径。
+template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
-  image:
-    file: ../../assets/houston.webp
+  title: AgentOfShield 文档中心
+  tagline: 面向 AI Agent 生态的桌面端与命令行安全文档
   actions:
-    - text: Example Guide
-      link: /guides/example/
-      icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
+    - text: 查看 AOS Desktop
+      link: /aos-desktop/
+      variant: primary
+    - text: 查看 AOS CLI
+      link: /aos-cli/
+      variant: secondary
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Next steps
+## 选择入口
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
+	<Card title="AOS Desktop" icon="desktop">
+		适合通过图形界面完成扫描、研判、隔离处置和运行时活动监控的团队。
 	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
+	<Card title="AOS CLI" icon="terminal-window">
+		适合在终端、脚本或 CI 中执行扫描、代码库审计和 JSON 输出。
 	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	<Card title="独立文档站" icon="open-book">
+		这个仓库只负责文档，不再和营销首页混在一起，后续可以单独部署到 docs 域名。
 	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	<Card title="首批内容" icon="check-circle">
+		当前已包含产品概览、快速开始、运行时监控和命令参考这些核心页面。
 	</Card>
 </CardGrid>
+
+## 文档结构
+
+- [AOS Desktop](/aos-desktop/)：桌面安全工作台，覆盖本地发现、静态扫描、隔离处置与活动监控。
+- [AOS CLI](/aos-cli/)：命令行入口，适合自动化、终端工作流和代码库审计。
+
+## 建议阅读顺序
+
+1. 想先理解产品整体价值，先看 AOS Desktop 和 AOS CLI 的产品概览。
+2. 想快速上手，直接进入对应产品的“快速开始”。
+3. 如果你的重点是运行时观测，继续看 AOS Desktop 的“活动监控”。

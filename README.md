@@ -1,49 +1,40 @@
-# Starlight Starter Kit: Basics
+# AOS Doc
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+独立的 AgentOfShield 文档站仓库，承载 AOS Desktop 与 AOS CLI 的产品说明、快速开始和命令参考。
 
-```
-npm create astro@latest -- --template starlight
-```
+## 技术栈
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- Astro 6
+- Starlight
 
-## 🚀 Project Structure
+## 本地运行
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
-
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   └── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
+```bash
+npm install
+npm run dev
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+默认启动后访问 `http://localhost:4321`。
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+## 构建
 
-Static assets, like favicons, can be placed in the `public/` directory.
+```bash
+npm run build
+```
 
-## 🧞 Commands
+## 内容目录
 
-All commands are run from the root of the project, from a terminal:
+```text
+src/content/docs/
+├── index.mdx
+├── aos-desktop/
+│   ├── index.md
+│   ├── quick-start.md
+│   └── activity-monitor.md
+└── aos-cli/
+    ├── index.md
+    ├── quick-start.md
+    └── commands.md
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+桌面端截图放在 `src/assets/screenshots/`，文档中通过相对路径直接引用。

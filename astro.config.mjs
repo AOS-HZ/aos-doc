@@ -4,21 +4,31 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://docs.agentshield.site',
 	integrations: [
 		starlight({
-			title: 'My Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			title: 'AgentOfShield Docs',
+			description: 'AOS Desktop 与 AOS CLI 的产品文档中心。',
+			favicon: '/favicon.svg',
+			locales: {
+				root: {
+					label: '简体中文',
+					lang: 'zh-CN',
+				},
+			},
+			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/AOS-HZ' }],
 			sidebar: [
 				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
+					label: '开始阅读',
+					items: [{ label: '文档首页', slug: 'index' }],
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'AOS Desktop',
+					autogenerate: { directory: 'aos-desktop' },
+				},
+				{
+					label: 'AOS CLI',
+					autogenerate: { directory: 'aos-cli' },
 				},
 			],
 		}),
