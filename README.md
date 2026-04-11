@@ -1,6 +1,6 @@
 # AOS Doc
 
-独立的 AgentOfShield 文档站仓库，承载 AOS Desktop 与 AOS CLI 的产品说明、快速开始和命令参考。
+独立的 AgentOfShield 文档入口站仓库，当前用于引导访问正式文档站 `https://doc.agentshield.site`。
 
 ## 技术栈
 
@@ -29,14 +29,6 @@ npm run build
 ```text
 docs/
 ├── README.md
-├── aos-desktop/
-│   ├── README.md
-│   ├── quick-start.md
-│   └── activity-monitor.md
-├── aos-cli/
-│   ├── README.md
-│   ├── quick-start.md
-│   └── commands.md
 └── .vuepress/
     ├── config.ts
     └── public/
@@ -44,4 +36,4 @@ docs/
         └── images/screenshots/
 ```
 
-桌面端截图放在 `docs/.vuepress/public/images/screenshots/`，文档中通过公开路径引用。
+静态资源放在 `docs/.vuepress/public/`，会随站点一起发布。
