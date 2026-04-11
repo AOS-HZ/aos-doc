@@ -4,8 +4,8 @@ import { defineUserConfig } from 'vuepress';
 
 export default defineUserConfig({
 	lang: 'zh-CN',
-	title: 'AgentOfShield Docs',
-	description: 'AgentOfShield 文档入口页。',
+	title: 'AOS Docs',
+	description: 'AOS Desktop 与 AOS CLI 的产品文档中心。',
 	head: [['link', { rel: 'icon', href: '/favicon.svg' }]],
 	theme: defaultTheme({
 		logo: '/favicon.svg',
@@ -15,8 +15,23 @@ export default defineUserConfig({
 		lastUpdated: false,
 		navbar: [
 			{ text: '首页', link: '/' },
-			{ text: '阅读文档', link: 'https://doc.agentshield.site' },
+			{ text: 'AOS Desktop', link: '/aos-desktop/' },
+			{ text: 'AOS CLI', link: '/aos-cli/' },
 		],
+		sidebar: {
+			'/aos-desktop/': [
+				{
+					text: 'AOS Desktop',
+					children: ['', 'quick-start.md', 'activity-monitor.md'],
+				},
+			],
+			'/aos-cli/': [
+				{
+					text: 'AOS CLI',
+					children: ['', 'quick-start.md', 'commands.md'],
+				},
+			],
+		},
 	}),
 	bundler: viteBundler(),
 });
