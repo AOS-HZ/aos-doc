@@ -1,20 +1,29 @@
 ---
-home: true
-title: AOS 产品文档
-heroText: AOS 产品文档
-tagline: 面向 AgentOfShield 用户的产品说明与使用文档，覆盖 AOS Desktop、AOS CLI、快速开始、命令参考与运行时监控。
-actions:
-  - text: 查看 AOS Desktop
-    link: /aos-desktop/
-    type: primary
-  - text: 查看 AOS CLI
-    link: /aos-cli/
-    type: secondary
-features:
-  - title: AOS Desktop
-    details: 适合通过图形界面完成资产发现、风险研判、隔离处置与运行时监控。
-  - title: AOS CLI
-    details: 适合在终端、脚本或 CI 中运行扫描、仓库审计和 JSON 输出。
-  - title: 文档覆盖范围
-    details: 当前包含产品概览、快速开始、活动监控与命令参考，便于围绕文档本身持续维护。
+title: AOS Desktop 帮助文档
+description: 面向普通用户的 AOS Desktop 使用帮助。
 ---
+
+# AOS Desktop 帮助文档
+
+这里整理了 AOS Desktop 的常用功能和使用方法。你可以按自己想完成的事情选择文章，而不需要先了解产品背后的实现方式。
+
+## 开始使用
+
+- [AOS Desktop 是做什么的](/aos-desktop/)
+- [第一次使用 AOS Desktop](/aos-desktop/quick-start.md)
+
+## 查看活动和风险
+
+- [查看活动总览](/aos-desktop/activity-monitor.md)
+- [查看一次任务的完整过程](/aos-desktop/sessions.md)
+- [处理安全告警](/aos-desktop/alerts.md)
+
+## 管理技能
+
+- [查看本机技能](/aos-desktop/skills.md)
+- [查看技能风险分析](/aos-desktop/skill-risk.md)
+
+## 调整设置
+
+- [设置通知、后台运行和数据保留](/aos-desktop/settings.md)
+- [常见问题](/aos-desktop/faq.md)

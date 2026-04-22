@@ -1,6 +1,8 @@
 # AOS Doc
 
-独立的 AgentOfShield 文档站仓库，承载 AOS Desktop 与 AOS CLI 的产品说明、快速开始和命令参考。
+独立的 AgentOfShield 文档站仓库，当前对外承载 AOS Desktop 的用户帮助文档。
+
+AOS CLI 相关文档已临时移入 `archived/aos-cli/`，不参与 VuePress 站点构建，也不会出现在导航和首页入口中。
 
 ## 技术栈
 
@@ -32,16 +34,24 @@ docs/
 ├── aos-desktop/
 │   ├── README.md
 │   ├── quick-start.md
-│   └── activity-monitor.md
-├── aos-cli/
-│   ├── README.md
-│   ├── quick-start.md
-│   └── commands.md
+│   ├── activity-monitor.md
+│   ├── sessions.md
+│   ├── alerts.md
+│   ├── skills.md
+│   ├── skill-risk.md
+│   ├── settings.md
+│   └── faq.md
 └── .vuepress/
     ├── config.ts
     └── public/
         ├── favicon.svg
         └── images/screenshots/
+
+archived/
+└── aos-cli/
+    ├── README.md
+    ├── quick-start.md
+    └── commands.md
 ```
 
 桌面端截图放在 `docs/.vuepress/public/images/screenshots/`，文档中通过公开路径引用。

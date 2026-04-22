@@ -5,7 +5,7 @@ import { defineUserConfig } from 'vuepress';
 export default defineUserConfig({
 	lang: 'zh-CN',
 	title: 'AOS Docs',
-	description: 'AOS Desktop 与 AOS CLI 的产品文档中心。',
+	description: 'AOS Desktop 的产品文档中心。',
 	head: [['link', { rel: 'icon', href: '/favicon.svg' }]],
 	theme: defaultTheme({
 		logo: '/favicon.svg',
@@ -16,19 +16,54 @@ export default defineUserConfig({
 		navbar: [
 			{ text: '首页', link: '/' },
 			{ text: 'AOS Desktop', link: '/aos-desktop/' },
-			{ text: 'AOS CLI', link: '/aos-cli/' },
 		],
 		sidebar: {
 			'/aos-desktop/': [
 				{
-					text: 'AOS Desktop',
-					children: ['', 'quick-start.md', 'activity-monitor.md'],
+					text: '开始使用',
+					children: ['', 'runtimes.md'],
+				},
+				{
+					text: '日常使用',
+					children: ['activity-monitor.md', 'sessions.md', 'alerts.md'],
+				},
+				{
+					text: '技能管理',
+					children: ['skills.md', 'skill-risk.md'],
+				},
+				{
+					text: '通知与界面',
+					children: ['menu-bar.md', 'widget.md'],
+				},
+				{
+					text: '设置',
+					children: ['settings.md', 'faq.md'],
 				},
 			],
-			'/aos-cli/': [
+			'/': [
 				{
-					text: 'AOS CLI',
-					children: ['', 'quick-start.md', 'commands.md'],
+					text: '开始使用',
+					children: ['/aos-desktop/', '/aos-desktop/runtimes.md'],
+				},
+				{
+					text: '日常使用',
+					children: [
+						'/aos-desktop/activity-monitor.md',
+						'/aos-desktop/sessions.md',
+						'/aos-desktop/alerts.md',
+					],
+				},
+				{
+					text: '技能管理',
+					children: ['/aos-desktop/skills.md', '/aos-desktop/skill-risk.md'],
+				},
+				{
+					text: '通知与界面',
+					children: ['/aos-desktop/menu-bar.md', '/aos-desktop/widget.md'],
+				},
+				{
+					text: '设置',
+					children: ['/aos-desktop/settings.md', '/aos-desktop/faq.md'],
 				},
 			],
 		},

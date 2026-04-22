@@ -1,56 +1,50 @@
 ---
-title: AOS Desktop
-description: 面向 AI Agent 生态的桌面安全工作台，聚焦本地发现、风险分析、隔离处置和运行时监控。
+title: 认识 AOS Desktop
+description: 了解 AOS Desktop 是什么、能帮你做什么，以及主要功能在哪里。
 ---
 
-AOS Desktop 是 AgentOfShield 的桌面端产品，用来帮助团队看清本地 Agent、Skill、MCP Server、Prompt、Resource 和代码仓库中的风险暴露面。
+# 认识 AOS Desktop
 
-它不是单点扫描器，而是一套围绕本地 AI 生态构建的安全工作台，负责把发现、分析、监控和处置放到同一个图形界面里完成。
+AOS Desktop 是一款运行在本机的桌面应用，帮助你监控 AI 助手在你电脑上的所有行为——消耗了多少 token、调用了哪些工具、触发了哪些安全风险，以及每次任务的完整过程。
 
-## 核心能力
+## 你可以用它做什么
 
-- 本地资产发现：自动盘点本机上的 Skill、Agent、MCP Server、Tool、Prompt 和 Resource。
-- 静态风险检测：重点识别 Shell 执行、敏感文件访问、外部网络请求、远程代码下载和 Prompt Injection 等模式。
-- 风险分析：按组件查看 findings、风险分数、关联文件和建议动作。
-- 隔离区：把高风险 Skill 移出常规使用路径，便于恢复或清理。
-- 代码库扫描：对本地 Agent 项目和 MCP 集成仓库做专门审计。
-- 活动监控：把工具调用、模型调用和安全事件纳入统一时间线。
+### 查看活动总览
 
-## 典型使用方式
+总览页汇总所有已连接 AI 工具的近期使用情况：token 消耗、工具调用次数、成本估算、风险事件数量。你可以按今天、7 天、30 天等时间段筛选，对比不同工具或 Agent 的用量。
 
-1. 先执行本地扫描，建立 Agent 生态资产清单。
-2. 在概览页定位高风险组件，再进入详情页做研判。
-3. 对不可信或待观察的组件执行隔离或进一步复核。
-4. 对项目仓库执行专门审计，补足开发阶段检查。
-5. 接入活动监控，形成“运行前检查 + 运行中观察”的闭环。
+![AOS Desktop 活动总览](/images/screenshots/runtime-overview.png)
 
-## 产品界面
+### 追踪一次任务的完整过程
 
-### 安全概览
+会话页把一次任务里发生的所有事情串起来——从输入开始，到模型调用、工具调用，再到任务结束。你可以用时间线或交互式画布查看每一步，找到失败或风险出现在哪个环节。
 
-![AOS Desktop 安全概览](/images/screenshots/dashboard.png)
+![AOS Desktop 会话画布](/images/screenshots/live-canvas.png)
 
-### Skill 管理
+### 处理安全告警
 
-![AOS Desktop Skill 管理](/images/screenshots/skills-management.png)
+告警页集中展示所有检测到的风险事件，分为"已拦截"和"观察中"两类。点开一条告警就能看到它来自哪个工具、触发了什么规则，以及是否已被自动拦截。
 
-### 风险分析
+![AOS Desktop 安全告警](/images/screenshots/alerts.png)
 
-![AOS Desktop 风险分析](/images/screenshots/risk-analysis.png)
+### 管理本机技能
 
-### 隔离区
+技能页展示 AOS Desktop 在本机发现的所有技能，包括它们来自哪里、关联了哪些 AI 工具，以及安全分析的结果和风险评分。
 
-![AOS Desktop 隔离区](/images/screenshots/quarantine-zone.png)
+![AOS Desktop 技能管理](/images/screenshots/skills-management.png)
 
-## 技术基础
+## 主要功能在哪里
 
-- 桌面容器：Tauri 2
-- 前端：React、TypeScript、Vite、Tailwind CSS
-- 后端：Rust
-- 本地发现与静态扫描：复用 `aos-core` 中的 `discovery-engine` 和 `local-scanner`
-- 数据存储：SQLite
+| 我想做的事 | 去哪里 |
+|---|---|
+| 看整体用量和风险概况 | 侧边栏 → 总览 |
+| 查看一次任务的过程 | 侧边栏 → 会话 |
+| 处理安全告警 | 侧边栏 → 告警 |
+| 管理本机技能 | 侧边栏 → 技能 |
+| 设置通知和数据保留 | 侧边栏 → 设置 |
+| 不打开应用查看今日用量 | macOS 菜单栏图标 |
+| 在锁屏或通知中心查看数据 | macOS 桌面小组件 |
 
-## 继续阅读
+## 支持哪些 AI 工具
 
-- [AOS Desktop 快速开始](./quick-start.md)
-- [AOS Desktop 活动监控](./activity-monitor.md)
+AOS Desktop 支持 Claude Code、Cursor、Gemini、Qwen、CodeWhisperer 等主流 AI 编程工具。详见[支持的 AI 工具](./runtimes.md)。
