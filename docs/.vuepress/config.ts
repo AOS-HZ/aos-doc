@@ -3,10 +3,11 @@ import { defaultTheme } from '@vuepress/theme-default';
 import { defineUserConfig } from 'vuepress';
 
 export default defineUserConfig({
+	base: '/doc/',
 	lang: 'zh-CN',
 	title: 'AOS Docs',
 	description: 'AOS Desktop 的产品文档中心。',
-	head: [['link', { rel: 'icon', href: '/favicon.svg' }]],
+	head: [['link', { rel: 'icon', href: '/doc/favicon.svg' }]],
 	theme: defaultTheme({
 		logo: '/favicon.svg',
 		repo: 'https://github.com/AOS-HZ',

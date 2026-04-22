@@ -1,4 +1,22 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "outputDirectory": "docs/.vuepress/dist"
+  "outputDirectory": "docs/.vuepress/dist",
+  "rewrites": [
+    {
+      "source": "/doc/",
+      "destination": "/"
+    },
+    {
+      "source": "/doc",
+      "destination": "/"
+    },
+    {
+      "source": "/doc/aos-desktop/",
+      "destination": "/aos-desktop/"
+    },
+    {
+      "source": "/doc/:path*",
+      "destination": "/:path*"
+    }
+  ]
 }
