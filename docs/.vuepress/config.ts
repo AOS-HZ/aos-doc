@@ -34,7 +34,7 @@ export default defineUserConfig({
 				},
 				{
 					text: '通知与界面',
-					children: ['menu-bar.md', 'widget.md'],
+					children: ['notifications.md', 'menu-bar.md', 'widget.md'],
 				},
 				{
 					text: '设置',
@@ -60,7 +60,11 @@ export default defineUserConfig({
 				},
 				{
 					text: '通知与界面',
-					children: ['/aos-desktop/menu-bar.md', '/aos-desktop/widget.md'],
+					children: [
+						'/aos-desktop/notifications.md',
+						'/aos-desktop/menu-bar.md',
+						'/aos-desktop/widget.md',
+					],
 				},
 				{
 					text: '设置',
