@@ -44,7 +44,7 @@ export default defineUserConfig({
 			'/': [
 				{
 					text: '开始使用',
-					children: ['/aos-desktop/', '/aos-desktop/runtimes.md'],
+					children: ['/', '/aos-desktop/runtimes.md'],
 				},
 				{
 					text: '日常使用',
